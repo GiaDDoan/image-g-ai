@@ -46,7 +46,6 @@ const CreatePost = () => {
       setLoading(true);
       
       try {
-        console.log('STRINGING', JSON.stringify(form))
         const response = await fetch('http://localhost:8080/api/v1/post', {
           method: 'POST',
           headers: {
@@ -96,7 +95,7 @@ const CreatePost = () => {
             <FormField 
               labelName="Prompt"
               type="text"
-              name="Prompt"
+              name="prompt"
               placeholder="a painting of a fox in the style of Starry Night"
               value={form.prompt}
               handleChange={handleChange}
