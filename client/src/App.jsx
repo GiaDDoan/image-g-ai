@@ -34,10 +34,12 @@ const App = () => {
           <div className='flex items-center dark:text-[#f9fafe]'><TbBrandOpenai className='text-4xl' /><span className='text-xl font-bold'>OpenAI</span></div>
         </Link>
 
-        <button onClick={handleThemeSwitch}>Theme {theme}</button>
+        <button onClick={handleThemeSwitch} className='font-inter font-bold bg-black dark:bg-white text-white dark:text-black text-bold px-4 py-2 rounded-md hover:opacity-60 duration-200'>
+          {theme == 'light' ? 'Dark' : 'Light'} Theme
+          </button>
 
-        <Link to='/create-post' className='font-inter font-medium bg-[#6469ff] text-white px-4 py-2 rounded-md'>
-          Create
+        <Link to='/create-post' className='font-inter font-bold bg-[#6469ff] text-white px-4 py-2 rounded-md hover:opacity-60 duration-200'>
+          Create a new post
         </Link>
       </header>
       <main className='sm:p-8 px-4 py-8 w-full bg-[#f9fafe] dark:bg-dark-theme min-h-[calc(100vh-73px)]'>
